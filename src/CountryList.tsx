@@ -1,4 +1,3 @@
-// src/CountryList.tsx
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { gql } from "@apollo/client";
@@ -38,7 +37,6 @@ const CountryList: React.FC = () => {
     if (!loading && data) {
       const countries = data.countries;
 
-      // Automatically select the 10th item or the last one if there are fewer than 10 items
       if (countries.length > 0) {
         const indexToSelect = Math.min(9, countries.length - 1);
         setSelectedItem(countries[indexToSelect].code);
